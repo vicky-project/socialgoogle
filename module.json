@@ -1,0 +1,11 @@
+{
+    "name": "SocialGoogle",
+    "alias": "socialgoogle",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SocialGoogle\\Providers\\SocialGoogleServiceProvider"
+    ],
+    "files": []
+}
