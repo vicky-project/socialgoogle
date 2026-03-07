@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use Nwidart\Modules\Traits\PathNamespace;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
+use Nwidart\Modules\Facades\Module;
 
 class SocialGoogleServiceProvider extends ServiceProvider
 {
