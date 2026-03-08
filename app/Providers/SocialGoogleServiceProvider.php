@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use Nwidart\Modules\Traits\PathNamespace;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
+use Nwidart\Modules\Facades\Module;
 
 class SocialGoogleServiceProvider extends ServiceProvider
 {
@@ -21,7 +22,7 @@ class SocialGoogleServiceProvider extends ServiceProvider
   */
   public function boot(): void
   {
-    if (Module::isEnabled("SocialAccount") && class_exists($managerService = \Modules\SocialAccount\Services\SocialProviderManager::class)) {
+    if (Module::has("SocialAccount") && Module::isEnabled("SocialAccount") && class_exists($managerService = \Modules\SocialAccount\Services\SocialProviderManager::class)) {
       $manager = app($managerService);
       $manager->register(new GoogleSocialProvider());
     }
