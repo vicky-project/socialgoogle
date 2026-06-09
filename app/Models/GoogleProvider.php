@@ -9,14 +9,22 @@ use Modules\SocialAccount\Models\SocialAccount;
 class GoogleProvider extends Model implements SocialAccountInterface
 {
   protected $table = 'google_providers';
-  protected $fillable = ['provider_id',
+  protected $fillable = [
+    'provider_id',
     'email',
     'name',
     'avatar',
-    'data'];
+    'data'
+  ];
+
   protected $casts = ['data' => 'array'];
 
   public function provider(): MorphOne {
     return $this->morphOne(SocialAccount::class, "providerable");
+  }
+
+  public function openLink(): string
+  {
+    return 'google.profile';
   }
 }
