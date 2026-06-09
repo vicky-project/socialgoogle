@@ -25,6 +25,6 @@ class GoogleProvider extends Model implements SocialAccountInterface
 
   public function openLink(): string
   {
-    return '';
+    return 'google.profile';
   }
 }
