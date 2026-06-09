@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'name' => 'SocialGoogle',
+  'name' => 'SocialGoogle',
+  'back_url' => env('APP_URL') . '/profile'
 ];

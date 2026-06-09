@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="google-header">
-  <a href="{{ url()->previous() }}" class="back-link">
+  <a href="{{ config('socialgoogle.back_url') ?? url()->previous() }}" class="back-link">
     <i class="bi bi-arrow-left"></i> Kembali
   </a>
   <h2 class="page-title">Akun Google</h2>
